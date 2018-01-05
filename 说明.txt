@@ -1,0 +1,12 @@
+host配置：
+127.0.0.1  www.test.com
+127.0.0.1  aaa.test.com
+127.0.0.1  bbb.test.com
+
+
+
+childDomain是www.test.com   http://www.test.com/Home/About 负责清除cookie，整个域名域都会删除cookie
+
+DomainB是bbb.test.com    http://www.test.com/Home/About   负责调用cookie
+
+cookie是aaa.test.com   http://aaa.test.com/      负责生成  ，整个域名都会添加cookie
