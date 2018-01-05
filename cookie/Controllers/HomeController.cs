@@ -10,10 +10,11 @@ namespace cookie.Controllers
     {
         public ActionResult Index()
         {
+            var ReturnURL = Request.QueryString["returnurl"].ToString();
             var cookie = new HttpCookie("li", "andy");
             cookie.Domain=".test.com";
             Response.SetCookie(cookie);
-            return View();
+            return Redirect(ReturnURL);
         }
 
         public ActionResult About()
